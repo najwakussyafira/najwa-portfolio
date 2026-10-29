@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Najwa Kus Syafira | ERP & Business Analyst</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FBF7FF; --ink:#2A2038; --soft:#6B6079; --card:#FFFFFF; --line:#E6DCF2;
+  --accent:#C9A8F2; --on-accent:#2A2038;
+  --f-head:"Bricolage Grotesque","Trebuchet MS",sans-serif;
+  --f-body:"Figtree","Segoe UI",Arial,sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#1C1626;--ink:#F3ECFA;--soft:#B5A9C6;--card:#272032;--line:#3A3048}
+}
+:root[data-theme="dark"]{--bg:#1C1626;--ink:#F3ECFA;--soft:#B5A9C6;--card:#272032;--line:#3A3048}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;font-family:var(--f-body);color:var(--ink);line-height:1.65;
+  background:color-mix(in srgb,var(--accent) 14%,var(--bg));transition:background .6s}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--f-head);line-height:1.05;margin:0;letter-spacing:-.02em}
+section{padding:72px 0}
+
+/* hero */
+.hero{padding:56px 0 40px;position:relative;overflow:hidden}
+.hero h1{font-size:clamp(3rem,10vw,7rem);font-weight:800}
+.hero h1 span{display:block}
+.blob{position:absolute;right:-90px;top:20px;width:min(46vw,380px);aspect-ratio:1;border-radius:58% 42% 55% 45%/48% 56% 44% 52%;
+  background:var(--accent);opacity:.55;filter:blur(2px);transition:background .6s;animation:morph 14s ease-in-out infinite;z-index:0}
+@keyframes morph{50%{border-radius:42% 58% 45% 55%/56% 44% 56% 44%;transform:rotate(14deg)}}
+.hero .wrap{position:relative;z-index:1}
+.lead{max-width:34ch;font-size:1.2rem;color:var(--soft);margin:24px 0 32px}
+.mood{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.mood p{margin:0 8px 0 0;font-weight:600}
+.mood button{border:2px solid transparent;background:var(--c);color:#2A2038;font:600 .95rem var(--f-body);
+  padding:9px 18px;border-radius:999px;cursor:pointer;transition:transform .2s,border-color .2s}
+.mood button:hover{transform:translateY(-2px)}
+.mood button[aria-pressed="true"]{border-color:var(--ink)}
+.hint{font-size:.9rem;color:var(--soft);margin:12px 0 0}
+
+/* about */
+.about{display:grid;gap:40px;grid-template-columns:1fr}
+@media(min-width:800px){.about{grid-template-columns:1.1fr 1fr;align-items:start}}
+.about h2,.work h2,.contact h2{font-size:clamp(2rem,5vw,3.2rem);margin-bottom:20px}
+.about p{max-width:60ch;margin:0 0 14px}
+.skills{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.skills li{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.skills b{font-weight:600}
+.lvl{display:flex;gap:5px}
+.lvl i{width:22px;height:8px;border-radius:99px;background:var(--line)}
+.lvl i.on{background:var(--accent);transition:background .6s}
+.lvl-t{font-size:.85rem;color:var(--soft)}
+
+/* work */
+.proj{display:grid;gap:32px;background:var(--card);border:1px solid var(--line);border-radius:36px;padding:28px;margin-bottom:28px}
+@media(min-width:800px){.proj{grid-template-columns:1fr 1.05fr;padding:40px;align-items:center;gap:48px}.proj.flip .shot{order:2}}
+.proj h3{font-size:clamp(1.7rem,4vw,2.4rem);margin-bottom:6px}
+.sub{color:var(--soft);margin:0 0 16px;font-weight:500}
+.proj p{margin:0 0 14px;max-width:52ch}
+.meta{display:grid;gap:4px;margin:0 0 22px;font-size:.95rem}
+.meta dt{display:inline;font-weight:600}
+.meta dd{display:inline;margin:0;color:var(--soft)}
+.meta div{display:block}
+.meta dd.tt{display:inline-flex;flex-wrap:wrap;gap:6px;vertical-align:middle;margin-top:4px}
+.tt span{background:color-mix(in srgb,var(--accent) 30%,var(--card));color:var(--ink);padding:2px 12px;border-radius:999px;font-size:.88rem;font-weight:500}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-block;text-decoration:none;font-weight:600;padding:11px 20px;border-radius:999px;border:2px solid var(--ink);transition:background .2s,color .2s}
+.btn.fill{background:var(--accent);border-color:var(--accent);color:var(--on-accent);transition:background .6s}
+.btn:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+
+/* css mockups */
+.shot{display:flex;justify-content:center}
+.phone{width:210px;aspect-ratio:9/18;border:7px solid var(--ink);border-radius:34px;background:color-mix(in srgb,var(--accent) 22%,var(--card));padding:22px 14px 14px;display:flex;flex-direction:column;gap:10px;transform:rotate(-4deg)}
+.phone .t{height:12px;width:60%;background:var(--ink);border-radius:99px;opacity:.85}
+.faces{display:flex;justify-content:space-between;margin:6px 0}
+.faces i{width:30px;height:30px;border-radius:50%;background:var(--m);display:block}
+.faces i:nth-child(3){outline:2px solid var(--ink);outline-offset:2px}
+.card{background:var(--card);border-radius:16px;padding:12px;display:grid;gap:7px}
+.card u{display:block;height:7px;border-radius:99px;background:var(--line)}
+.card u:nth-child(2){width:70%}
+.card.big{flex:1;align-content:center}
+.nav{margin-top:auto;display:flex;justify-content:space-around}
+.nav i{width:18px;height:18px;border-radius:6px;background:var(--ink);opacity:.25}
+.nav i:first-child{opacity:.9}
+.browser{width:100%;max-width:440px;border:3px solid var(--ink);border-radius:20px;overflow:hidden;background:var(--card);transform:rotate(2deg)}
+.browser .bar{display:flex;gap:6px;padding:10px 14px;border-bottom:3px solid var(--ink);background:color-mix(in srgb,var(--accent) 30%,var(--card))}
+.browser .bar i{width:10px;height:10px;border-radius:50%;background:var(--ink)}
+.browser .body{padding:16px;display:grid;gap:12px}
+.nv{display:flex;justify-content:space-between}
+.nv u{width:36px;height:7px;border-radius:99px;background:var(--line);display:block}
+.nv u:first-child{width:60px;background:var(--ink)}
+.hr{height:110px;border-radius:16px;background:var(--accent);transition:background .6s;display:grid;place-content:center;gap:8px;padding:0 20px}
+.hr u{display:block;height:10px;width:140px;border-radius:99px;background:var(--on-accent);opacity:.8}
+.hr u+u{width:90px;opacity:.4}
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.cols u{display:block;height:54px;border-radius:12px;background:var(--line)}
+
+.dash{width:100%;max-width:440px;border:3px solid var(--ink);border-radius:20px;overflow:hidden;background:var(--card);display:grid;grid-template-columns:56px 1fr;transform:rotate(-2deg)}
+.dash .side{background:color-mix(in srgb,var(--accent) 35%,var(--card));border-right:3px solid var(--ink);padding:14px 0;display:grid;gap:12px;justify-items:center;align-content:start}
+.dash .side i{width:24px;height:24px;border-radius:8px;background:var(--ink);opacity:.25}
+.dash .side i:first-child{opacity:.9}
+.dash .main{padding:16px;display:grid;gap:12px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.stats u{display:block;height:44px;border-radius:12px;background:var(--accent);transition:background .6s}
+.stats u+u{background:var(--line)}
+.rows{display:grid;gap:8px}
+.rows u{display:block;height:14px;border-radius:99px;background:var(--line)}
+.rows u:nth-child(2){width:85%}.rows u:nth-child(3){width:70%}
+body{background:radial-gradient(60% 40% at 6% 0%,color-mix(in srgb,#F6B8E0 40%,transparent),transparent 70%),radial-gradient(50% 35% at 100% 28%,color-mix(in srgb,#9DD9F3 32%,transparent),transparent 70%),radial-gradient(50% 40% at 0% 78%,color-mix(in srgb,#FFE2B8 32%,transparent),transparent 70%),var(--bg)}
+.blob{right:-140px;top:-70px;width:min(72vw,580px);background:radial-gradient(circle at 30% 30%,#F6B8E0,#C9A8F2 48%,#9DD9F3 100%);opacity:.85;filter:blur(38px)}
+.hero-cta{margin-top:4px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px}
+.chips span{font:600 1rem var(--f-head);padding:10px 20px;border-radius:999px;background:color-mix(in srgb,var(--card) 62%,transparent);border:1px solid color-mix(in srgb,var(--card) 80%,transparent);box-shadow:0 10px 30px color-mix(in srgb,#9B6DE0 22%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);animation:bob 6s ease-in-out infinite;animation-delay:var(--d)}
+@keyframes bob{50%{transform:translateY(-12px)}}
+@media(min-width:800px){.chips{position:absolute;right:0;top:10px;width:340px;height:380px;margin:0;display:block}.chips span{position:absolute;top:var(--t);left:var(--l)}}
+.band{overflow:hidden;background:var(--ink);color:var(--bg);transform:rotate(-1.6deg);margin:28px -24px 8px;padding:14px 0;white-space:nowrap;font:700 1.25rem var(--f-head)}
+.band .run{display:inline-block;animation:run 32s linear infinite}
+@keyframes run{to{transform:translateX(-50%)}}
+.tools{display:grid;gap:14px}
+.tools>div{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:20px 22px}
+.tools h3{font-size:1.15rem;margin-bottom:12px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:0}
+.tags span{background:color-mix(in srgb,var(--accent) 30%,var(--card));padding:6px 15px;border-radius:999px;font-weight:500;font-size:.95rem}
+/* contact */
+.contact{text-align:center;padding-bottom:96px}
+.contact p{max-width:44ch;margin:0 auto 28px;color:var(--soft)}
+.contact .btns{justify-content:center}
+footer{text-align:center;color:var(--soft);font-size:.9rem;padding:0 24px 40px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="blob" aria-hidden="true"></div>
+  <div class="wrap">
+    <h1><span>Najwa</span><span>Kus Syafira</span></h1>
+    <p class="lead">Mahasiswa Sistem Informasi Bisnis semester 5 yang tertarik pada ERP dan analisis bisnis: memahami kebutuhan pengguna dan mengubahnya menjadi sistem yang berguna. Sedang belajar Odoo dan mencari kesempatan magang.</p>
+    <div class="btns hero-cta">
+      <a class="btn fill" href="#karya">Lihat karya</a>
+      <a class="btn" href="#kontak">Hubungi saya</a>
+    </div>
+    <div class="chips" aria-hidden="true">
+      <span style="--t:2%;--l:34%;--d:0s">Moodly</span>
+      <span style="--t:20%;--l:0%;--d:-1.2s">ERP & Odoo</span>
+      <span style="--t:38%;--l:48%;--d:-2.4s">SIPALING</span>
+      <span style="--t:58%;--l:8%;--d:-3.6s">Analisis bisnis</span>
+      <span style="--t:76%;--l:40%;--d:-4.8s">Lab BA</span>
+    </div>
+  </div>
+</header>
+
+<div class="band" aria-hidden="true">
+  <div class="run"><span>ERP ✦ Odoo ✦ Analisis bisnis ✦ Sistem informasi ✦ Inventaris ✦ Kebutuhan pengguna ✦ Desain antarmuka ✦ </span><span>ERP ✦ Odoo ✦ Analisis bisnis ✦ Sistem informasi ✦ Inventaris ✦ Kebutuhan pengguna ✦ Desain antarmuka ✦ </span></div>
+</div>
+
+<main>
+<section id="tentang">
+  <div class="wrap about">
+    <div>
+      <h2>Tentang saya</h2>
+      <p>Saya mahasiswa Sistem Informasi Bisnis di Politeknik Negeri Malang dan lulusan SMK Negeri 1 Pasuruan jurusan Teknik Komputer dan Jaringan. Saya tertarik pada ERP, analisis bisnis, dan sistem informasi, yaitu menjembatani kebutuhan bisnis dengan solusi teknologi. Saat ini saya sedang mempelajari Odoo.</p>
+      <p>Lewat proyek PBL, saya terlibat dari sisi tampilan dan front-end di website laboratorium dan aplikasi mobile, dan semester ini di sistem inventaris berbasis web, yang konsepnya dekat dengan modul inventaris pada ERP. Latar belakang ini membantu saya memahami kebutuhan pengguna sekaligus apa yang realistis dibangun tim teknis.</p>
+    </div>
+    <div class="tools" aria-label="Keterampilan">
+      <div><h3>Fokus</h3><p class="tags"><span>ERP</span><span>Odoo (dasar)</span><span>Analisis bisnis</span><span>Sistem informasi</span><span>Kebutuhan pengguna</span></p></div>
+      <div><h3>Desain</h3><p class="tags"><span>Figma</span><span>Canva</span><span>Desain visual</span><span>Editing visual</span></p></div>
+      <div><h3>Dipakai di proyek</h3><p class="tags"><span>HTML</span><span>Laravel</span><span>Vue</span><span>Tailwind CSS</span><span>MySQL</span></p></div>
+    </div>
+  </div>
+</section>
+
+<section id="karya" class="work">
+  <div class="wrap">
+    <h2>Karya</h2>
+
+    <article class="proj flip">
+      <div class="shot" aria-hidden="true">
+        <div class="dash">
+          <div class="side"><i></i><i></i><i></i><i></i></div>
+          <div class="main"><div class="stats"><u></u><u></u><u></u></div><div class="rows"><u></u><u></u><u></u><u></u><u></u></div></div>
+        </div>
+      </div>
+      <div>
+        <h3>SIPALING Inventory</h3>
+        <p class="sub">Sistem inventaris berbasis web</p>
+        <p>Aplikasi web untuk mengelola inventaris yang dikerjakan secara tim, dengan konsep yang serupa modul inventaris pada ERP. Sistem ini punya backend, tampilan antarmuka, database, dan akun uji coba untuk pengujian.</p>
+        <dl class="meta">
+          <div><dt>Teknologi: </dt><dd class="tt"><span>Laravel</span><span>Vue (Inertia)</span><span>Tailwind CSS</span><span>shadcn</span><span>MySQL</span></dd></div>
+          <div><dt>Konteks: </dt><dd>Project Based Learning, semester 5</dd></div>
+        </dl>
+        <div class="btns">
+          <a class="btn fill" href="https://github.com/jevonkagenou/sipaling-inventory" target="_blank" rel="noopener">Lihat di GitHub</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="proj">
+      <div class="shot" aria-hidden="true">
+        <div class="phone">
+          <div class="t"></div>
+          <div class="faces"><i style="--m:#FFD98A"></i><i style="--m:#A8E6D3"></i><i style="--m:#A9C7F7"></i><i style="--m:#FFB3B3"></i><i style="--m:#D4B5F5"></i></div>
+          <div class="card"><u></u><u></u></div>
+          <div class="card big"><u></u><u></u><u></u></div>
+          <div class="nav"><i></i><i></i><i></i><i></i></div>
+        </div>
+      </div>
+      <div>
+        <h3>Moodly</h3>
+        <p class="sub">Aplikasi mobile pelacak suasana hati</p>
+        <p>Aplikasi untuk mencatat mood harian, dilengkapi afirmasi harian, diary pribadi, dan ruang curhat anonim antarpengguna. Saya merancang desain antarmukanya dan ikut mengodekan tampilannya.</p>
+        <dl class="meta">
+          <div><dt>Peran: </dt><dd>Desain UI/UX dan coding tampilan (front-end)</dd></div>
+          <div><dt>Tools: </dt><dd class="tt"><span>Figma</span><span>Canva</span><span>HTML</span><span>CSS</span></dd></div>
+          <div><dt>Konteks: </dt><dd>Project Based Learning, semester 4</dd></div>
+        </dl>
+        <div class="btns">
+          <a class="btn fill" href="https://www.figma.com/design/y6oHL3oC3cZrdVMiyN9GR0/Untitled?m=auto&t=lG3v9FPvIX4SWfVu-1" target="_blank" rel="noopener">Lihat di Figma</a>
+          <a class="btn" href="https://github.com/MariaSavira/Moodly-PBL-SMT-4" target="_blank" rel="noopener">Lihat di GitHub</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="proj flip">
+      <div class="shot" aria-hidden="true">
+        <div class="browser">
+          <div class="bar"><i></i><i></i><i></i></div>
+          <div class="body">
+            <div class="nv"><u></u><u></u><u></u><u></u></div>
+            <div class="hr"><u></u><u></u></div>
+            <div class="cols"><u></u><u></u><u></u></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3>Website Lab Business Analyst</h3>
+        <p class="sub">Desain dan front-end website laboratorium</p>
+        <p>Merancang tampilan website untuk Laboratorium Business Analyst, lalu mengubahnya menjadi kode tampilan (front-end).</p>
+        <dl class="meta">
+          <div><dt>Peran: </dt><dd>Desain UI/UX dan coding tampilan (front-end)</dd></div>
+          <div><dt>Tools: </dt><dd class="tt"><span>Figma</span><span>Canva</span><span>HTML</span><span>CSS</span></dd></div>
+          <div><dt>Konteks: </dt><dd>Project Based Learning, semester 3</dd></div>
+        </dl>
+        <div class="btns">
+          <a class="btn fill" href="https://www.figma.com/design/k3qENML7MgtAO6pAQt4MgW/PBL-Lab-BA-Kel5?m=auto&t=lG3v9FPvIX4SWfVu-1" target="_blank" rel="noopener">Lihat di Figma</a>
+          <a class="btn" href="https://github.com/MariaSavira/PBL-SMT-3" target="_blank" rel="noopener">Lihat di GitHub</a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="kontak" class="contact">
+  <div class="wrap">
+    <h2>Ayo ngobrol</h2>
+    <p>Saya terbuka untuk magang di bidang ERP/Odoo (Functional Consultant), Business Analyst, atau System Analyst. Kirim pesan kapan saja.</p>
+    <div class="btns">
+      <a class="btn fill" href="https://wa.me/6289679838609" target="_blank" rel="noopener">WhatsApp 0896-7983-8609</a>
+      <a class="btn" href="mailto:kussyafira@gmail.com">kussyafira@gmail.com</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>Najwa Kus Syafira, Sistem Informasi Bisnis</footer>
+
+<script>
+(function(){
+  var root=document.documentElement, btns=document.querySelectorAll('.mood button');
+  btns.forEach(function(b){
+    b.addEventListener('click',function(){
+      root.style.setProperty('--accent',b.dataset.c);
+      btns.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
+    });
+  });
+})();
+</script>
+</body>
+</html>
