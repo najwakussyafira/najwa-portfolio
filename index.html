@@ -29,7 +29,7 @@ a{color:inherit}
 .wrap{max-width:1040px;margin:0 auto;padding:0 24px}
 h1,h2,h3{font-family:var(--f-head);line-height:1.05;margin:0;letter-spacing:-.02em}
 section{padding:72px 0}
-
+ 
 /* hero */
 .hero{padding:56px 0 40px;position:relative;overflow:hidden}
 .hero h1{font-size:clamp(3rem,10vw,7rem);font-weight:800}
@@ -46,7 +46,7 @@ section{padding:72px 0}
 .mood button:hover{transform:translateY(-2px)}
 .mood button[aria-pressed="true"]{border-color:var(--ink)}
 .hint{font-size:.9rem;color:var(--soft);margin:12px 0 0}
-
+ 
 /* about */
 .about{display:grid;gap:40px;grid-template-columns:1fr}
 @media(min-width:800px){.about{grid-template-columns:1.1fr 1fr;align-items:start}}
@@ -59,7 +59,7 @@ section{padding:72px 0}
 .lvl i{width:22px;height:8px;border-radius:99px;background:var(--line)}
 .lvl i.on{background:var(--accent);transition:background .6s}
 .lvl-t{font-size:.85rem;color:var(--soft)}
-
+ 
 /* work */
 .proj{display:grid;gap:32px;background:var(--card);border:1px solid var(--line);border-radius:36px;padding:28px;margin-bottom:28px}
 @media(min-width:800px){.proj{grid-template-columns:1fr 1.05fr;padding:40px;align-items:center;gap:48px}.proj.flip .shot{order:2}}
@@ -76,7 +76,7 @@ section{padding:72px 0}
 .btn{display:inline-block;text-decoration:none;font-weight:600;padding:11px 20px;border-radius:999px;border:2px solid var(--ink);transition:background .2s,color .2s}
 .btn.fill{background:var(--accent);border-color:var(--accent);color:var(--on-accent);transition:background .6s}
 .btn:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
-
+ 
 /* css mockups */
 .shot{display:flex;justify-content:center}
 .phone{width:210px;aspect-ratio:9/18;border:7px solid var(--ink);border-radius:34px;background:color-mix(in srgb,var(--accent) 22%,var(--card));padding:22px 14px 14px;display:flex;flex-direction:column;gap:10px;transform:rotate(-4deg)}
@@ -103,7 +103,7 @@ section{padding:72px 0}
 .hr u+u{width:90px;opacity:.4}
 .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
 .cols u{display:block;height:54px;border-radius:12px;background:var(--line)}
-
+ 
 .dash{width:100%;max-width:440px;border:3px solid var(--ink);border-radius:20px;overflow:hidden;background:var(--card);display:grid;grid-template-columns:56px 1fr;transform:rotate(-2deg)}
 .dash .side{background:color-mix(in srgb,var(--accent) 35%,var(--card));border-right:3px solid var(--ink);padding:14px 0;display:grid;gap:12px;justify-items:center;align-content:start}
 .dash .side i{width:24px;height:24px;border-radius:8px;background:var(--ink);opacity:.25}
@@ -130,15 +130,17 @@ body{background:radial-gradient(60% 40% at 6% 0%,color-mix(in srgb,#F6B8E0 40%,t
 .tools h3{font-size:1.15rem;margin-bottom:12px}
 .tags{display:flex;flex-wrap:wrap;gap:8px;margin:0}
 .tags span{background:color-mix(in srgb,var(--accent) 30%,var(--card));padding:6px 15px;border-radius:999px;font-weight:500;font-size:.95rem}
-.exp{display:grid;gap:28px;background:var(--card);border:1px solid var(--line);border-radius:36px;padding:28px}
+ 
+/* pengalaman (PKL) - foto sudah diperbaiki, tidak terpotong lagi */
+.exp{display:grid;gap:28px;background:var(--card);border:1px solid var(--line);border-radius:36px;padding:28px;height:auto;overflow:visible}
 @media(min-width:800px){.exp{grid-template-columns:1.1fr .9fr;padding:40px;gap:44px;align-items:center}}
 .exp h3{font-size:clamp(1.5rem,3.6vw,2.1rem);margin-bottom:6px}
 .exp p{margin:0 0 12px;max-width:52ch}
 .exp .when{color:var(--soft);font-weight:500}
-.pics{display:grid;gap:12px}
-.pics img{width:100%;display:block;border-radius:22px;object-fit:cover}
-.pics .tall{aspect-ratio:4/4.2}
+.pics{display:grid;gap:12px;align-self:center}
+.pics img{display:block;width:100%;height:auto;max-height:560px;object-fit:contain;border-radius:22px;background:color-mix(in srgb,var(--accent) 14%,var(--card))}
 .exp-wrap{margin-top:8px}
+ 
 /* contact */
 .contact{text-align:center;padding-bottom:96px}
 .contact p{max-width:44ch;margin:0 auto 28px;color:var(--soft)}
@@ -148,7 +150,7 @@ footer{text-align:center;color:var(--soft);font-size:.9rem;padding:0 24px 40px}
 </style>
 </head>
 <body>
-
+ 
 <header class="hero">
   <div class="blob" aria-hidden="true"></div>
   <div class="wrap">
@@ -167,11 +169,11 @@ footer{text-align:center;color:var(--soft);font-size:.9rem;padding:0 24px 40px}
     </div>
   </div>
 </header>
-
+ 
 <div class="band" aria-hidden="true">
   <div class="run"><span>ERP ✦ Odoo ✦ Analisis bisnis ✦ Sistem informasi ✦ Inventaris ✦ Kebutuhan pengguna ✦ Desain antarmuka ✦ </span><span>ERP ✦ Odoo ✦ Analisis bisnis ✦ Sistem informasi ✦ Inventaris ✦ Kebutuhan pengguna ✦ Desain antarmuka ✦ </span></div>
 </div>
-
+ 
 <main>
 <section id="tentang">
   <div class="wrap about">
@@ -187,11 +189,11 @@ footer{text-align:center;color:var(--soft);font-size:.9rem;padding:0 24px 40px}
     </div>
   </div>
 </section>
-
+ 
 <section id="karya" class="work">
   <div class="wrap">
     <h2>Karya</h2>
-
+ 
     <article class="proj flip">
       <div class="shot" aria-hidden="true">
         <div class="dash">
@@ -212,7 +214,7 @@ footer{text-align:center;color:var(--soft);font-size:.9rem;padding:0 24px 40px}
         </div>
       </div>
     </article>
-
+ 
     <article class="proj">
       <div class="shot" aria-hidden="true">
         <div class="phone">
@@ -238,7 +240,7 @@ footer{text-align:center;color:var(--soft);font-size:.9rem;padding:0 24px 40px}
         </div>
       </div>
     </article>
-
+ 
     <article class="proj flip">
       <div class="shot" aria-hidden="true">
         <div class="browser">
@@ -267,7 +269,7 @@ footer{text-align:center;color:var(--soft);font-size:.9rem;padding:0 24px 40px}
     </article>
   </div>
 </section>
-
+ 
 <section id="pengalaman" class="work" style="padding-top:0">
   <div class="wrap">
     <h2>Pengalaman</h2>
@@ -278,13 +280,13 @@ footer{text-align:center;color:var(--soft);font-size:.9rem;padding:0 24px 40px}
         <p>Enam bulan PKL di bank perkreditan rakyat sebagai siswa Teknik Komputer dan Jaringan, SMK Negeri 1 Pasuruan. Dari sini saya belajar langsung bagaimana pekerjaan dan proses bisnis berjalan di lingkungan perbankan.</p>
       </div>
       <div class="pics">
-        <img class="tall" src="pkl-2.jpg" alt="Najwa saat PKL di BPR Kota Pasuruan" loading="lazy">
+        <img src="pkl-2.jpg" alt="Najwa saat PKL di BPR Kota Pasuruan" loading="lazy">
         <img src="pkl-1.jpg" alt="Najwa mengerjakan dokumen saat PKL" loading="lazy">
       </div>
     </article>
   </div>
 </section>
-
+ 
 <section id="kontak" class="contact">
   <div class="wrap">
     <h2>Ayo ngobrol</h2>
@@ -296,9 +298,9 @@ footer{text-align:center;color:var(--soft);font-size:.9rem;padding:0 24px 40px}
   </div>
 </section>
 </main>
-
+ 
 <footer>Najwa Kus Syafira, Sistem Informasi Bisnis</footer>
-
+ 
 <script>
 (function(){
   var root=document.documentElement, btns=document.querySelectorAll('.mood button');
@@ -312,3 +314,4 @@ footer{text-align:center;color:var(--soft);font-size:.9rem;padding:0 24px 40px}
 </script>
 </body>
 </html>
+ 
